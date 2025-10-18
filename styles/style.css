@@ -1,1 +1,127 @@
-/* место для вашего кода */
+.header {
+    display: grid;
+    grid-template-columns: 1fr min-content 1fr; 
+    align-items: center;
+    padding: 90px 50px 96px 50px;
+    width: 100%;
+
+    
+}
+
+.header__menu {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: normal;
+    font-style: normal;
+}
+
+.header__link {
+    text-decoration: underline;
+    
+}
+
+.header__logo {
+    width: 148px;
+    height: 105px;
+    display: flex;
+    justify-content: center;
+}
+
+.header__address {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-self: end;
+    list-style: none;
+    font-style: normal;
+    font-size: 18px;
+    font-weight: 400;
+    padding-right: 34.4px;
+    line-height: 24.3px;
+    letter-spacing: 0.18px;
+
+}
+
+.header__links-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    list-style: circle;
+    gap: 33px;
+}
+
+.header__links-list-item {
+  list-style-type: none; 
+}
+.header___link_active {
+   text-decoration: none;
+}
+.overlay {
+    position: absolute;
+    z-index: -1;
+}
+
+
+.cover {
+    position: relative;
+    background-image: url(../images/cover.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.cover__title {
+    color:white;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 48px 333px 282px 437px;
+    grid-template-rows: 153px 138px 63px 10px 55px 150px 100px;
+    grid-template-areas:
+    ". . . ."
+    ". ono . ."
+    ". . . ."
+    ". . tebe ."
+    ". . . ."
+    ". . . nado"
+    ". . . ."
+
+}
+
+.ono {
+    
+    grid-area: ono;
+    
+}
+
+.tebe {
+    grid-area: tebe;
+}
+
+.nado {
+    grid-area: nado;
+}
+
+.cover__description {
+    color: white;
+}
+.letter_spacing {
+    letter-spacing: 30px;
+    width: 339px;
+    height: 115px;
+    font-size: 100px;
+}
+.cover__description {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 28px;
+    word-spacing: 18px;
+}
+
+.cover__description-text {
+    padding-right: 40px;
+    padding-bottom: 59px;
+    margin: 0;
+}
