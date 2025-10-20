@@ -17,7 +17,6 @@
 .header__link,
 .footer__link {
     text-decoration: underline;
-    
 }
 
 .header__logo {
@@ -96,7 +95,6 @@
     ". . . ."
     ". . . nado"
     ". . . ."
-
 }
 
 .ono {
@@ -132,8 +130,8 @@
 }
 
 .cover__description-text {
-  word-spacing: 18px;
-  margin-right: 27px;
+    word-spacing: 18px;
+    margin-right: 27px;
 }
 
 .bet-button {
@@ -178,8 +176,7 @@
     list-style-type: none;
     display: flex;
     justify-content: space-between;
-    gap: 25px;
-    
+    gap: 25px; 
 }
 
 .lots__card-list-item {
@@ -274,7 +271,6 @@
     display: flex;
     align-items: center;
     height: 248px;
-
 }
 
 .about__text {
