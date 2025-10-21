@@ -14,11 +14,6 @@
     font-style: normal;
 }
 
-.header__link,
-.footer__link {
-    text-decoration: underline;
-}
-
 .header__logo {
     width: 148px;
     height: 105px;
@@ -48,20 +43,18 @@
     gap: 33px;
 }
 
-.header__links-list-item
-{
-  list-style-type: none; 
+.main_link {
+ list-style-type: none; 
 }
 
 .header___link_active,
-.footer___link_active {
-   text-decoration: none;
+.footer__link_active {
+ text-decoration: none;
 }
+
 .overlay {
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  /*вместо координат вот это*/
+  inset: 0;
   position: absolute;
   background-color: rgba(0, 0, 0, 0.6);
   width: 100%;
@@ -85,42 +78,44 @@
     color:white;
     display: grid;
     align-items: center;
-    grid-template-columns: 49px 333px 282px 438px;
-    grid-template-rows: 153px 138px 61px 10px 55px 150px 104px;
+    padding-top: 164px;
+    padding-left: 36px;
+    padding-bottom: 106px;
+    /*разделено на ровные колонки*/
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
-    ". . . ."
-    ". ono . ."
-    ". . . ."
-    ". . tebe ."
-    ". . . ."
-    ". . . nado"
-    ". . . ."
-}
-
-.ono {
-    
-    grid-area: ono;
+    "left . ."
+    ".  center ."
+    ". . right"
     
 }
 
-.tebe {
-    grid-area: tebe;
+.aligned-text_left {
+    grid-area: left;
+    padding-left: 13px;
 }
 
-.nado {
-    grid-area: nado;
+.aligned-text_center {
+    grid-area: center;
+    margin-top: 18px;
+    margin-right: 37px;
 }
 
-.cover__description {
-    color: white;
+.aligned-text_right {
+    grid-area: right;
+    margin-left: -93px;
+    padding-top: 16px;
 }
+
 .letter_spacing {
+    /*убрана высота*/
     letter-spacing: 30px;
     width: 339px;
-    height: 115px;
     font-size: 100px;
+    text-transform: uppercase;
 }
 .cover__description {
+    color: white;
     display: flex;
     justify-content: space-evenly;
     font-size: 22px;
@@ -131,7 +126,8 @@
 
 .cover__description-text {
     word-spacing: 18px;
-    margin-right: 27px;
+    text-transform: uppercase;
+    padding-top: 11px;
 }
 
 .bet-button {
@@ -144,8 +140,9 @@
   font-weight: 500;
   text-align: center;
   letter-spacing: 0.3px;
-  margin-top: -14px;
-  margin-left: 28px;
+  /*отрицательный маргин заменен*/
+  margin-left: 56px;
+  text-transform: uppercase;
 }
 
 .lots {
@@ -153,29 +150,35 @@
 }
 
 .card {
-    display: flex;
-    position:relative;
-    z-index: 2;
-    flex-direction: column;
-    padding: 48px 40px;
-    min-height: 596px;
-    color: white;
+    display: flex; 
+    position:relative; 
+    z-index: 2; 
+    flex-direction: column; 
+    padding: 48px 40px; 
+    min-height: 596px; 
+    color: white; 
     align-items: stretch;
+    background-size: cover; 
+    background-position: center;
+    justify-content: space-between;
 }
 
 .lots__heading {
     width: 121px;
-    height: 47px;
+    /*высота убрана*/
     font-size: 40px;
     font-weight: 700;
     padding-left: 38px;
     padding-top: 5px;
-    padding-bottom: 73px;
+    padding-bottom: 26px;
+    text-transform: uppercase;
 }
 
 .lots__card-list {
     list-style-type: none;
     display: flex;
+    /*добавлено св-во*/
+    flex-wrap: wrap;
     justify-content: space-between;
     gap: 25px; 
 }
@@ -188,17 +191,16 @@
     display: flex;
     flex-direction: column;
     width: 254px;
-    height: 82px;
     font-weight: 700;
     font-size: 22px;
     text-decoration: underline;
     align-items: end;
+    text-transform: uppercase;
 }
 
 .card__text {
     display: flex;
     Width: 254px;
-    Height: 419px;
     font-size: 20px;
     font-weight: 400;
     align-items: flex-end;
@@ -211,20 +213,14 @@
 
 .card_type_film {
   background-image: url(../images/card-lot-01.jpg);
-  background-size: cover;
-  background-position: center;
 }
 
 .card_type_book {
   background-image: url(../images/card-lot-02.jpg);
-  background-size: cover;
-  background-position: center;
 }
 
 .card_type_picture {
   background-image: url(../images/card-lot-03.jpg);
-  background-size: cover;
-  background-position: center;
 }
 
 .lots__look-more-link {
@@ -241,7 +237,7 @@
 }
 
 .about {
-    margin: 152px 24px 159px 31px;
+    margin: 152px 24px 154px 31px;
 }
 
 .about__column {
@@ -269,14 +265,19 @@
 
 .about__title {
     font-size: 40px;
+    /*высоты тут тоже больше неть*/
     display: flex;
-    align-items: center;
-    height: 248px;
+    text-transform: uppercase;
+    padding-top: 101px;
+    padding-bottom: 100px;
 }
 
 .about__text {
     font-size: 20px;
-    padding-bottom: 23px;
+    padding-bottom: 25px;
+    padding-right: 1px;
+    line-height: 24px;
+    font-weight: 500;
 }
 
 .footer {
@@ -311,7 +312,6 @@
     grid-template-columns: repeat(3, 45px);
     gap: 50px;
     margin-left: 64px;
-    
 }
 
 .footer__address {
@@ -324,6 +324,5 @@
     font-size: 18px;
     font-weight: 400;
     line-height: 1.4;
-
 }
 
