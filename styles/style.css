@@ -53,7 +53,6 @@
 }
 
 .overlay {
-  /*вместо координат вот это*/
   inset: 0;
   position: absolute;
   background-color: rgba(0, 0, 0, 0.6);
@@ -81,7 +80,6 @@
     padding-top: 164px;
     padding-left: 36px;
     padding-bottom: 106px;
-    /*разделено на ровные колонки*/
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
     "left . ."
@@ -108,7 +106,6 @@
 }
 
 .letter_spacing {
-    /*убрана высота*/
     letter-spacing: 30px;
     width: 339px;
     font-size: 100px;
@@ -140,7 +137,6 @@
   font-weight: 500;
   text-align: center;
   letter-spacing: 0.3px;
-  /*отрицательный маргин заменен*/
   margin-left: 56px;
   text-transform: uppercase;
 }
@@ -165,7 +161,6 @@
 
 .lots__heading {
     width: 121px;
-    /*высота убрана*/
     font-size: 40px;
     font-weight: 700;
     padding-left: 38px;
@@ -177,7 +172,6 @@
 .lots__card-list {
     list-style-type: none;
     display: flex;
-    /*добавлено св-во*/
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 25px; 
@@ -265,7 +259,6 @@
 
 .about__title {
     font-size: 40px;
-    /*высоты тут тоже больше неть*/
     display: flex;
     text-transform: uppercase;
     padding-top: 101px;
@@ -281,9 +274,9 @@
 }
 
 .footer {
+    /*убрана ширина*/
     display: grid;
     grid-template-columns: 348px 348px 304px;
-    width: 100%;
     margin: 20px 50px 82px 50px;
 }
 
